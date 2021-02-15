@@ -1,7 +1,7 @@
 namespace VicsGarageEx5.Vehicles
 {
-    public class Car : Vehicle
+    public class Car : LandVehicle
     {
-        public int NumberOfSeats { get; }
+        public int NumberOfSeats { get; set; }
     }
 }

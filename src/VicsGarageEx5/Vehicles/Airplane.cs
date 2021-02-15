@@ -1,8 +1,8 @@
 namespace VicsGarageEx5.Vehicles
 {
-    public class Airplane : Vehicle
+    public class Airplane : AirVehicle
     {
-        public double WingSpan { get; }
+        public double WingSpan { get; set; }
         
     }
 }

@@ -1,7 +1,7 @@
 namespace VicsGarageEx5.Vehicles
 {
-    public class Bus : Vehicle
+    public class Bus : LandVehicle
     {
-        public double Length { get; }
+        public double Length { get; set; }
     }
 }
