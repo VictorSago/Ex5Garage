@@ -13,7 +13,9 @@ namespace VicsGarageEx5.Vehicles
         public static VehicleRegistry Instance { get => _instance; }
         
 
-        public Vehicle CreateVehicle<T>(string registration, string color, FuelType fuel = FuelType.Gasoline) where T : Vehicle, new()
+        public Vehicle CreateVehicle<T>(string registration, string color, FuelType fuel = FuelType.Gasoline, 
+                                        uint wheels = 4, double weight = 1, double displacement = 5) 
+                                where T : Vehicle, new()
         {
             Vehicle vehicle = null;
             if (VehicleRegistry.Instance.Add(registration))

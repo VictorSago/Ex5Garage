@@ -13,6 +13,7 @@ namespace VicsGarageEx5.Vehicles
         protected Vehicle()
         {
         }
+        
         public virtual void Initialize(string registration, string color, FuelType fuel)
         {
             RegistrationID = registration;
@@ -20,17 +21,6 @@ namespace VicsGarageEx5.Vehicles
             FuelType = fuel;
         }
 
-
-        // public static Vehicle CreateVehicle<T>(string registration, string color, FuelType fuel = FuelType.Gasoline) where T : Vehicle, new()
-        // {
-        //     Vehicle vehicle = null;
-        //     if (VehicleRegistry.Instance.Add(registration))
-        //     {
-        //         vehicle = new T();
-        //         vehicle.Initialize(registration, color, fuel);
-        //     }
-        //     return vehicle;
-        // }
  
         public override bool Equals(object obj)
         {

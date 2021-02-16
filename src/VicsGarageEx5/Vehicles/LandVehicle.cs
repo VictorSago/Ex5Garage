@@ -15,19 +15,10 @@ namespace VicsGarageEx5.Vehicles
             NumberOfWheels = numberOfWheels;
         }
 
-        public override bool Equals(object obj)
-        {
-            return base.Equals(obj);
-        }
-
         public override string ToString()
         {
             return $"{base.ToString()}, {NumberOfWheels} wheels";
         }
 
-        public override int GetHashCode()
-        {
-            return base.GetHashCode();
-        }
     }
 }
