@@ -24,7 +24,7 @@ namespace VicsGarageEx5
             return _instance;
         }
 
-        public IGarage<IVehicle> CreateGarage(string name, int capacity)
+        public IGarage<IVehicle> CreateGarage(string name, uint capacity)
         {
             _current = Garage<IVehicle>.CreateGarage(name, capacity);
             return Current;

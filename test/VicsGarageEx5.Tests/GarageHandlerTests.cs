@@ -28,7 +28,7 @@ namespace VicsGarageEx5.Tests
         public void GarageHandlerCreateGarage_Test()
         {
             string name = "GarageNo1";
-            int capacity = 10;
+            uint capacity = 10;
 
             var garage = gh.CreateGarage(name, capacity);
 
@@ -41,7 +41,7 @@ namespace VicsGarageEx5.Tests
             string name1 = "GarageNo1";
             string name2 = "GarageNo2";
             string name3 = "GarageNo3";
-            int capacity = 10;
+            uint capacity = 10;
 
             var garage1 = gh.CreateGarage(name1, capacity);
             var garage2 = gh.CreateGarage(name2, capacity);

@@ -6,7 +6,7 @@ namespace VicsGarageEx5
     public interface IGarage<T> : IEnumerable<T> where T : IVehicle
     {
         string Name { get; set; }
-        int Capacity { get; }
+        uint Capacity { get; }
         int Count { get; set; }
 
         int ParkVehicle(T vehicle);

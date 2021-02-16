@@ -9,14 +9,14 @@ namespace VicsGarageEx5
     public class Garage<T> : IGarage<T> where T : IVehicle
     {
         public string Name { get ; set; }
-        public int Capacity { get; }
+        public uint Capacity { get; }
         public int Count { get; set; }
         
         private T[] parkedVehicles;
 
         
 
-        protected Garage(string name, int capacity)
+        protected Garage(string name, uint capacity)
         {
             Name = name;
             Capacity = capacity;
@@ -24,7 +24,7 @@ namespace VicsGarageEx5
             Count = 0;
         }
 
-        internal static Garage<T> CreateGarage(string name, int capacity)
+        internal static Garage<T> CreateGarage(string name, uint capacity)
         {
             return new Garage<T>(name, capacity);
         }
