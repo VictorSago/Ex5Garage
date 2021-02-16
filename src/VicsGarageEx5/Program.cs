@@ -8,7 +8,7 @@ namespace VicsGarageEx5
         static void Main(string[] args)
         {
             
-            GarageHandler gh = GarageHandler.Instance();
+            GarageHandler gh = GarageHandler.Instance;
             VehicleRegistry vregistry = VehicleRegistry.Instance;
             IGarage<IVehicle> garage = gh.CreateGarage("Garage01", 42);
             Console.WriteLine($"{garage.ToString()}");
@@ -46,6 +46,7 @@ namespace VicsGarageEx5
 
             Console.WriteLine("---After removing car2---");
             Console.WriteLine($"{garage.ToString()}");
+            
         }
     }
 }

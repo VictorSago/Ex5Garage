@@ -19,10 +19,7 @@ namespace VicsGarageEx5
             _current = null;
         }
 
-        public static GarageHandler Instance()
-        {
-            return _instance;
-        }
+        public static GarageHandler Instance { get => _instance; }
 
         public IGarage<IVehicle> CreateGarage(string name, uint capacity)
         {

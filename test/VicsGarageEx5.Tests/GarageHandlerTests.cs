@@ -12,14 +12,14 @@ namespace VicsGarageEx5.Tests
 
         public GarageHandlerTests()
         {
-            gh = GarageHandler.Instance();
+            gh = GarageHandler.Instance;
         }
 
         [Fact]
         public void GarageHandlerSingleInstance_Test()
         {
-            var gh1 = GarageHandler.Instance();
-            var gh2 = GarageHandler.Instance();
+            var gh1 = GarageHandler.Instance;
+            var gh2 = GarageHandler.Instance;
 
             Assert.Same(gh1, gh2);
         }

@@ -9,22 +9,34 @@ namespace VicsGarageEx5
             Console.WriteLine($"{message}");   
         }
 
-        public override string Input()
+        public override string GetString()
         {
             return Console.ReadLine();
         }
 
-        public override double InputDouble()
+        public override double GetDouble()
         {
             throw new NotImplementedException();
         }
 
-        public override int InputInt()
+        public override int GetInt()
+        {
+            var input = Console.ReadLine();
+            int result;
+            while (!Int32.TryParse(input, out result))
+            {
+                Output($"Couldn't parse {input}. Try again:");
+                input = Console.ReadLine();
+            }
+            return result;
+        }
+
+        public override int GetValidatedInt(int min, int max)
         {
             throw new NotImplementedException();
         }
-
-        public override bool InputYN()
+        
+        public override bool GetYN()
         {
             throw new NotImplementedException();
         }

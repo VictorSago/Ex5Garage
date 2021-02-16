@@ -19,7 +19,8 @@ namespace VicsGarageEx5.Tests
         {
             var gName = "GarageNo6";
             var capacity = 42u;
-            ghandler = GarageHandler.Instance();
+            ghandler = GarageHandler.Instance;
+            vregistry = VehicleRegistry.Instance;
             garage = ghandler.CreateGarage(gName, capacity);
             
         }
