@@ -9,7 +9,7 @@ namespace VicsGarageEx5
         {
             
             GarageHandler gh = GarageHandler.Instance();
-            Garage<Vehicle> garage = gh.CreateGarage("Garage01", 42);
+            IGarage<IVehicle> garage = gh.CreateGarage("Garage01", 42);
             Console.WriteLine($"{garage.ToString()}");
             var car1 = Vehicle.CreateVehicle<Car>("ABC123", "Green");
             var car2 = Vehicle.CreateVehicle<Car>("DEF123", "White");

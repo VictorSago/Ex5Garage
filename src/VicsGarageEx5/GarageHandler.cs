@@ -10,8 +10,8 @@ namespace VicsGarageEx5
     {
         protected static GarageHandler _instance = new GarageHandler();
 
-        private Garage<Vehicle> _current;
-        public Garage<Vehicle> Current { get => _current; set => _current = value; }
+        private IGarage<IVehicle> _current;
+        public IGarage<IVehicle> Current { get => _current; set => _current = value; }
 
         protected GarageHandler()
         {
@@ -24,24 +24,24 @@ namespace VicsGarageEx5
             return _instance;
         }
 
-        public Garage<Vehicle> CreateGarage(string name, int capacity)
+        public IGarage<IVehicle> CreateGarage(string name, int capacity)
         {
-            _current = Garage<Vehicle>.CreateGarage(name, capacity);
+            _current = Garage<IVehicle>.CreateGarage(name, capacity);
             return Current;
         }
 
-        public bool ParkVehicle(Garage<Vehicle> garage, Vehicle vehicle)
+        public bool ParkVehicle(IGarage<IVehicle> garage, IVehicle vehicle)
         {
             int result = garage.ParkVehicle(vehicle);
             return  result >= 0;
         }
 
-        public bool Contains(Garage<Vehicle> garage, Vehicle vehicle)
+        public bool Contains(IGarage<IVehicle> garage, IVehicle vehicle)
         {
             return garage.Contains(vehicle);
         }
 
-        public bool RemoveVehicle(Garage<Vehicle> garage, Vehicle vehicle)
+        public bool RemoveVehicle(IGarage<IVehicle> garage, IVehicle vehicle)
         {
             return (garage.RemoveVehicle(vehicle) is not null);
         }

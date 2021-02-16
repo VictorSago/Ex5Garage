@@ -8,5 +8,14 @@ namespace VicsGarageEx5
         string Name { get; set; }
         int Capacity { get; }
         int Count { get; set; }
+
+        int ParkVehicle(T vehicle);
+
+        T RemoveVehicle(T vehicle);
+
+        public bool Contains(T vehicle);
+
+        public void EmptyGarage();
+
     }
 }

@@ -8,7 +8,7 @@ namespace VicsGarageEx5.Tests
     public class GarageTests : IDisposable
     {
         protected GarageHandler gh;
-        protected Garage<Vehicle> garage;
+        protected IGarage<IVehicle> garage;
         
         /** 
           * Interference between tests necessitates creation of different

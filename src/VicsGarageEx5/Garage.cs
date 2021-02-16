@@ -35,7 +35,7 @@ namespace VicsGarageEx5
         /// <param name="vehicle">Vehicle to be parked</param>
         /// <returns>Successful parking returns the number of the parking lot,
         /// unsuccessful parking return a negative number</returns>
-        internal int ParkVehicle(T vehicle)
+        public int ParkVehicle(T vehicle)
         {
             if (Count >= Capacity || Contains(vehicle))
             {
@@ -49,7 +49,7 @@ namespace VicsGarageEx5
 
         private int FindFreeSpot()
         {
-            for (var i = 0; i < Capacity; i++)
+            for (var i = 0; i < parkedVehicles.Length; i++)
             {
                 if (parkedVehicles[i] is null)
                 {
@@ -65,7 +65,7 @@ namespace VicsGarageEx5
         /// </summary>
         /// <param name="vehicle">Vehicle to remove from this garage</param>
         /// <returns>Removed vehicle if successful, otherwise null</returns>
-        internal T RemoveVehicle(Vehicle vehicle)
+        public T RemoveVehicle(T vehicle)
         {
             T result = default(T);
             for (var i = 0; i < parkedVehicles.Length; i++)
@@ -80,6 +80,7 @@ namespace VicsGarageEx5
             }
             return result;
         }
+
         public bool Contains(T vehicle)
         {
             foreach (var v in parkedVehicles)
@@ -94,13 +95,6 @@ namespace VicsGarageEx5
 
         public void EmptyGarage()
         {
-            // for (var i = 0; i < parkedVehicles.Length; i++)
-            // {
-            //     if (parkedVehicles[i] != null)
-            //     {
-            //         RemoveVehicle(parkedVehicles[i]);
-            //     }
-            // }
             for (var i = 0; i < parkedVehicles.Length; i++)
             {
                 if (parkedVehicles[i] is not null)
@@ -149,5 +143,7 @@ namespace VicsGarageEx5
             }
             return sb.ToString();
         }
+
+        
     }
 }
