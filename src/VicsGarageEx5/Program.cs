@@ -9,13 +9,14 @@ namespace VicsGarageEx5
         {
             
             GarageHandler gh = GarageHandler.Instance();
+            VehicleRegistry vregistry = VehicleRegistry.Instance;
             IGarage<IVehicle> garage = gh.CreateGarage("Garage01", 42);
             Console.WriteLine($"{garage.ToString()}");
-            var car1 = Vehicle.CreateVehicle<Car>("ABC123", "Green");
-            var car2 = Vehicle.CreateVehicle<Car>("DEF123", "White");
-            var car3 = Vehicle.CreateVehicle<Car>("ABC456", "Red", FuelType.FuelCell);
-            var car4 = Vehicle.CreateVehicle<Car>("DEF456", "Yellow");
-            var car5 = Vehicle.CreateVehicle<Car>("XYZ999", "Black", FuelType.Ethanol);
+            var car1 = vregistry.CreateVehicle<Car>("ABC123", "Green");
+            var car2 = vregistry.CreateVehicle<Car>("DEF123", "White");
+            var car3 = vregistry.CreateVehicle<Car>("ABC456", "Red", FuelType.FuelCell);
+            var car4 = vregistry.CreateVehicle<Car>("DEF456", "Yellow");
+            var car5 = vregistry.CreateVehicle<Car>("XYZ999", "Black", FuelType.Ethanol);
 
             gh.ParkVehicle(garage, car1);
             gh.ParkVehicle(garage, car2);
